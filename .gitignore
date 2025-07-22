@@ -37,3 +37,5 @@ client/src/authConfig.js
 ## server/
 
 */.ipynb_checkpoints
+data-gen/available_rooms.json
+data-gen/email_map.json
