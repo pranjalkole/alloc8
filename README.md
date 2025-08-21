@@ -67,3 +67,16 @@ server {
 ```
 VITE_SERVER_URL="https://api.alloc8.in"
 ```
+
+## TBD
+- Send room booking updates with server-sent events - A pub-sub/observer system with a mutex should work. Ensure that the server is applying gzip compression on the SSE stream. Look into lock-free and wait-free algorithms as well.
+- Use HTTP caching on the server. Provide Cache-Control, ETag, and Last-Modified response headers for all endpoints.
+- Add the option to withdraw your allocation.
+- Improve error handling in client as well as server.
+- Improve logging in server - make sure to add timestamps for 2026.
+- Rewrite the server in golang using gin and go-swagger.
+- Migrate to swr, tanstack router with automatic code splitting and typescript on the client.
+- Add documentation and tests for each API route.
+- Add Logout button
+- Check if anubis should be used.
+- Look into other architectures for allocation. Here is an example based on the JoSAA allocation process - everyone enters their preference list for allocation and after everyone is done, the process starts. Things like roommates wanting to be together and people belonging to 3 separate rooms also need to be considered. A distributed ledger should be used.
